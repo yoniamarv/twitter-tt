@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile {{ profile.user.username }}</title>
+</head>
+<body>
+
+  {% include 'partials/navbar.html' %}
+
+  <h1>{{ profile.user.username }}</h1>
+
+  <h3>First name</h3>
+  {{ profile.user.first_name }}
+  <h3>Last name</h3>
+  {{ profile.user.last_name }}
+  <h3>Bio</h3>
+  {{ profile.bio }}
+  <h3>Tweets</h3>
+  {% for tweet in tweets %}
+    <p>{{ tweet.text }}</p>
+    <p>{{ tweet.date }}</p>
+    <hr>
+  {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet</title>
+</head>
+<body>
+
+  <h1>Tweet</h1>
+
+  <form method="POST">
+    {{ tweet_form.as_p }}
+    {% csrf_token %}
+    <input type="submit" name="submit" value="Tweet">
+  </form>
+
+</body>
+</html>
